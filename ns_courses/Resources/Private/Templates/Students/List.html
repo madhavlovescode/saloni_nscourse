@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <h1>Listing for Students</h1>
+
+    <f:flashMessages />
+
+    <table class="tx_nscourses">
+        <tr>
+            <th><f:translate key="tx_nscourses_domain_model_students.name" /></th>
+            <th><f:translate key="tx_nscourses_domain_model_students.email" /></th>
+            <th>Course</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <f:for each="{students}" as="student">
+            <tr>
+                <td><f:link.action action="show" arguments="{student : student}">{student.name}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{student : student}">{student.email}</f:link.action></td>
+                <td>
+                    <f:if condition="{student.course}">
+                        {student.course.title}
+                    </f:if>
+                  
+                </td>
+                <td><f:link.action action="edit" arguments="{students : student.uid}">Edit</f:link.action></td>
+                <td><f:link.action action="delete" arguments="{students : student.uid}">Delete</f:link.action></td>
+            </tr>
+        </f:for>
+    </table>
+
+  
+
+    <f:link.action action="new">New Students</f:link.action>
+</f:section>
+</html>

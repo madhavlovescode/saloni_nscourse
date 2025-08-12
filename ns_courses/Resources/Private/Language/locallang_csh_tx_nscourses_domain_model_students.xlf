@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:ns_courses/Resources/Private/Language/locallang_csh_tx_nscourses_domain_model_students.xlf" date="2025-07-22T13:50:26Z" product-name="ns_courses">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="number.description" resname="number.description">
+				<source>number</source>
+			</trans-unit>
+
+			<trans-unit id="course.description" resname="course.description">
+				<source>course</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

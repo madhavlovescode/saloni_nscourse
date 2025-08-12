@@ -1,0 +1,23 @@
+mod {
+  wizards.newContentElement.wizardItems.plugins {
+    elements {
+      course {
+        iconIdentifier = ns_courses-plugin-course
+        title = LLL:EXT:ns_courses/Resources/Private/Language/locallang_db.xlf:tx_ns_courses_course.name
+        description = LLL:EXT:ns_courses/Resources/Private/Language/locallang_db.xlf:tx_ns_courses_course.description
+        tt_content_defValues {
+          CType = nscourses_course
+        }
+      }
+      student {
+        iconIdentifier = ns_courses-plugin-student
+        title = LLL:EXT:ns_courses/Resources/Private/Language/locallang_db.xlf:tx_ns_courses_student.name
+        description = LLL:EXT:ns_courses/Resources/Private/Language/locallang_db.xlf:tx_ns_courses_student.description
+        tt_content_defValues {
+          CType = nscourses_student
+        }
+      }
+    }
+    show = *
+  }
+}

@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-ns-courses">
+	<tr>
+		<td><f:translate key="tx_nscourses_domain_model_course.title" /></td>
+		<td>{course.title}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_nscourses_domain_model_course.description" /></td>
+		<td>{course.description}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_nscourses_domain_model_course.file" /></td>
+		<td>
+				<a href="{course.file.originalResource.publicUrl}">
+					{course.file.originalResource.name}
+				</a>
+			</td>
+	</tr>
+</table>
+</html>

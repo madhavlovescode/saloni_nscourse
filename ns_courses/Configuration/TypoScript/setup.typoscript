@@ -1,0 +1,86 @@
+plugin.tx_nscourses_course {
+    view {
+        templateRootPaths.0 = EXT:ns_courses/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_nscourses_course.view.templateRootPath}
+        partialRootPaths.0 = EXT:ns_courses/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_nscourses_course.view.partialRootPath}
+        layoutRootPaths.0 = EXT:ns_courses/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_nscourses_course.view.layoutRootPath}
+    }
+  # persistence {
+   #    storagePid = {$plugin.tx_nscourses_course.persistence.storagePid}
+   #}
+    features {
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+plugin.tx_nscourses_student {
+    view {
+        templateRootPaths.0 = EXT:ns_courses/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_nscourses_student.view.templateRootPath}
+        partialRootPaths.0 = EXT:ns_courses/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_nscourses_student.view.partialRootPath}
+        layoutRootPaths.0 = EXT:ns_courses/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_nscourses_student.view.layoutRootPath}
+    }
+   #persistence {
+      # storagePid = {$plugin.tx_nscourses_student.persistence.storagePid}
+   #}
+    features {
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+tt_content.list.20.nscourses_course = USER
+tt_content.list.20.nscourses_course {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = NsCourses
+    pluginName = Course
+}
+
+tt_content.list.20.nscourses_student = USER
+tt_content.list.20.nscourses_student {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = NsCourses
+    pluginName = Student
+}
+
+plugin.tx_nscourses._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color: #FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color: #FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-ns-courses table {
+        border-collapse: separate;
+        border-spacing: 10px;
+    }
+
+    .tx-ns-courses table th {
+        font-weight: bold;
+    }
+
+    .tx-ns-courses table td {
+        vertical-align: top;
+    }
+
+    .typo3-messages .message-error {
+        color: red;
+    }
+
+    .typo3-messages .message-ok {
+        color: green;
+    }
+)
